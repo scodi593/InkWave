@@ -1,65 +1,18 @@
-
 # InkWave - Modern Blogging Platform
 
-InkWave is a full-stack blogging platform built with React, Node.js, and MongoDB. It features a modern UI, Google OAuth authentication, and real-time interactions.
+## Project Overview
 
-## Features
+InkWave is a full-stack blogging platform designed for modern content creators. It features a sleek UI, Google OAuth authentication, real-time interactions, and a robust backend. Users can create, edit, and delete posts, comment, like, bookmark, and search content. The platform is built with React (Vite), Redux Toolkit, Tailwind CSS on the frontend, and Node.js, Express, MongoDB, and Passport.js on the backend.
 
-- 🔐 Google OAuth Authentication
-- 📝 Create, Edit, Delete Posts
-- 🏷️ Tag System
-- 💬 Comment System
-- ❤️ Like/Unlike Posts
-- 🔖 Bookmark System
-- 🌓 Dark/Light Mode
-- 🔍 Search Posts
-- 👤 User Profiles
-- 📱 Responsive Design
+---
 
-## Tech Stack
+## Demo
 
-### Frontend
-- React (Vite)
-- Redux Toolkit (State Management)
-- React Router v6
-- Tailwind CSS
-- Axios
-- React Icons
+A short demo video of the app in action is available here:
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- Passport.js (Google OAuth)
-- JWT Authentication
-- Cookie-based Sessions
+[Watch Demo (local .mkv file)](C:/Users/SATHVIKA/Videos/2025-07-22%2000-34-54.mkv)
 
-## Project Structure
-
-```
-project/
-├── frontend/              # React frontend
-│   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── pages/        # Page components
-│   │   ├── redux/        # Redux store and slices
-│   │   ├── App.jsx       # Main app component
-│   │   └── main.jsx      # Entry point
-│   ├── public/           # Static assets
-│   ├── index.html        # HTML template
-│   ├── package.json      # Frontend dependencies
-│   └── vite.config.js    # Vite configuration
-│
-└── backend/              # Node.js backend
-    ├── controllers/      # Route controllers
-    ├── models/          # MongoDB models
-    ├── routes/          # API routes
-    ├── middleware/      # Custom middleware
-    ├── utils/           # Utility functions
-    ├── server.js        # Server entry point
-    └── package.json     # Backend dependencies
-```
+---
 
 ## Setup Instructions
 
@@ -71,48 +24,50 @@ project/
 ### Environment Variables
 
 #### Backend (.env)
-\`\`\`env
+```
 PORT=5000
 MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 CLIENT_URL=http://localhost:5173
-\`\`\`
+```
 
 #### Frontend (.env)
-\`\`\`env
+```
 VITE_API_URL=http://localhost:5000
-\`\`\`
+```
 
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone <repository-url>
-   cd project-name
-   \`\`\`
+   cd InkWave
+   ```
 
 2. **Backend Setup**
-   \`\`\`bash
+   ```bash
    cd backend
    npm install
-   
    # Start the server
    npm run dev  # Development
    npm start    # Production
-   \`\`\`
+   ```
 
 3. **Frontend Setup**
-   \`\`\`bash
+   ```bash
    cd frontend
    npm install
-   
    # Start the development server
    npm run dev
-   \`\`\`
+   ```
+
+---
 
 ## API Documentation
+
+A summary of the main API endpoints is provided below. For full details and testing, see the included Postman collection (`InkWave.postman_collection.json`).
 
 ### Authentication Routes
 - `GET /api/auth/google` - Initiate Google OAuth
@@ -139,104 +94,50 @@ VITE_API_URL=http://localhost:5000
 - `POST /api/user/bookmarks/:id` - Bookmark post
 - `DELETE /api/user/bookmarks/:id` - Remove bookmark
 
-## Frontend Integration
+---
 
-### API Integration
-- Axios instance with base URL and credentials
-- JWT token handling via HTTP-only cookies
-- Error handling and response interceptors
+## Prompting Techniques & AI Tool Usage
 
-### State Management
-- Redux store configuration
-- Auth slice for user state
-- Post slice for post data
-- Async thunks for API calls
+During the development of InkWave, AI tools were leveraged to:
+- **Generate Boilerplate Code:** Used AI to scaffold React components, Redux slices, and Express routes/controllers, accelerating initial setup.
+- **Refactor and Optimize:** Prompted AI to suggest improvements for code readability, performance, and best practices (e.g., optimizing Redux logic, improving API error handling).
+- **Debugging:** Asked AI for help in diagnosing and resolving bugs, especially in authentication flows and state management.
+- **Prompting Techniques:**
+  - Broke down complex requirements into smaller, specific prompts.
+  - Used iterative prompting: started with a broad question, then refined based on AI responses.
+  - Provided code snippets and context to get more accurate and relevant AI suggestions.
 
-### Routing
-- Protected routes with auth checks
-- Dynamic route parameters
-- Navigation guards
+---
 
-### Components
-- Reusable UI components
-- Form handling
-- Error boundaries
-- Loading states
+## Challenges Faced
 
-## Styling
+- **Merge Conflicts:** Encountered and resolved merge conflicts in documentation and code, especially when integrating features in parallel branches.
+- **Authentication Flow:** Integrating Google OAuth with JWT and cookies required careful handling of sessions and CORS.
+- **State Management:** Ensuring Redux state stayed in sync with backend, especially for likes, bookmarks, and comments.
+- **Responsive Design:** Achieving a seamless experience across devices required multiple iterations and Tailwind tweaks.
+- **API Error Handling:** Standardizing error responses and handling edge cases in both frontend and backend.
+- **AI Limitations:** Sometimes AI-generated code required manual adjustments for project-specific needs or to fix subtle bugs.
 
-### Tailwind Configuration
-- Custom color scheme
-- Dark mode support
-- Responsive breakpoints
-- Custom animations
+---
 
-### Theme
-- Light/Dark mode toggle
-- Consistent color palette
-- Responsive design
-- Custom fonts
+## Features
+- Google OAuth Authentication
+- Create, Edit, Delete Posts
+- Tag System
+- Comment System
+- Like/Unlike Posts
+- Bookmark System
+- Dark/Light Mode
+- Search Posts
+- User Profiles
+- Responsive Design
 
-## Security Features
-
-- JWT-based authentication
-- HTTP-only cookies
-- CORS configuration
-- Input validation
-- XSS protection
-- Rate limiting
-
-## Development Workflow
-
-1. **Starting the Development Environment**
-   ```bash
-   # Terminal 1 - Backend
-   cd backend
-   npm run dev
-
-   # Terminal 2 - Frontend
-   cd frontend
-   npm run dev
-   ```
-
-2. **Building for Production**
-   ```bash
-   # Backend
-   cd backend
-   npm run build
-
-   # Frontend
-   cd frontend
-   npm run build
-   ```
-
-## Deployment
-
-### Backend Deployment
-1. Set up MongoDB Atlas cluster
-2. Configure environment variables
-3. Deploy to hosting service (e.g., Heroku, DigitalOcean)
-4. Set up SSL certificate
-
-### Frontend Deployment
-1. Build the frontend
-2. Deploy to static hosting (e.g., Vercel, Netlify)
-3. Configure environment variables
-4. Set up custom domain (optional)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+---
 
 ## License
 
-This project is licensed under the MIT License 
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Support
 
-For support, email [sathvikambekar593@gmail.com] or open an issue in the repository. 
->>>>>>> 2c52194 (Initial commit)
+For support, email [sathvikambekar593@gmail.com] or open an issue in the repository.
