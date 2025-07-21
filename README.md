@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# InkWave
-Blogging website
-=======
+
 # InkWave - Modern Blogging Platform
 
 InkWave is a full-stack blogging platform built with React, Node.js, and MongoDB. It features a modern UI, Google OAuth authentication, and real-time interactions.
@@ -237,7 +234,7 @@ VITE_API_URL=http://localhost:5000
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License 
 
 ## Support
 
