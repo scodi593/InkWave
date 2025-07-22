@@ -138,6 +138,3 @@ During the development of InkWave, AI tools were leveraged to:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Support
-
-For support, email [sathvikambekar593@gmail.com] or open an issue in the repository.
