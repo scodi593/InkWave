@@ -10,7 +10,7 @@ InkWave is a full-stack blogging platform designed for modern content creators. 
 
 A short demo video of the app in action is available here:
 
-https://drive.google.com/file/d/1_h7Hdw6O7o-Ntb3PjM-w0B4T84lMhwbo/view?usp=sharing
+https://drive.google.com/file/d/1XqglTdhp85WUY93pzP8aefjCpLrSj9lj/view?usp=sharing
 
 ---
 
